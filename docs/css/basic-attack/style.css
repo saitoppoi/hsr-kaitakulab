@@ -1,0 +1,46 @@
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+#filterArea, 
+table thead tr th {
+    user-select: none;
+}
+
+table thead tr th:first-of-type,
+table tbody tr td:first-of-type {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    min-width: 62px;
+}
+
+table thead tr th:nth-of-type(2),
+table tbody tr td:nth-of-type(2) {
+    position: sticky;
+    left: 62px;
+    z-index: 1;
+}
+
+th.sort {
+    cursor: pointer;
+}
+
+th.sort.desc:after {
+    content: "▼";
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+th.sort.asc:after {
+    content: "▲";
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.filter-btn {
+    color: #052c65;
+    background-color: #cfe2ff;
+    cursor: pointer;
+}
